@@ -1,7 +1,23 @@
-sudo pip install cython
+# Tabletop Segmentation
 
-python setup.py build
+### Install cython
+```
+$ sudo pip install cython
+```
 
-sudo python setup.py install
+### Build and Install pcl-python
+```
+$ cd ~/RoboND-Perception-Exercises/python-pcl
+$ python setup.py build
+$ sudo python setup.py install
+```
 
-sudo apt-get install pcl-tools
+### Install pcl-tools
+```
+$ sudo apt-get install pcl-tools
+```
+
+### To view a .pcd file:
+```
+$ pcl_viewer filename.pcd 
+```
