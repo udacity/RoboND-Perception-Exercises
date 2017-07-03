@@ -22,7 +22,7 @@ $ roslaunch sensor_stick robot_spawn.launch
 ```
 ![sensor_stick](https://user-images.githubusercontent.com/9555001/27804170-51f5da76-5fe2-11e7-845c-130fcfd8cf3e.png)
 
-2. Create a python ros node that subscribes to `/sensor_stick/point_cloud` topic
+2. Create a python ros node that subscribes to `/sensor_stick/point_cloud` topic. Use the `template.py` file found under /sensor_stick/scripts/ to get started.
 
 3. Use your code from exercise-1 to apply various filters and segment the table in real-time
 
@@ -39,5 +39,6 @@ $ roslaunch sensor_stick robot_spawn.launch
 7. Finally publish your colored cluster cloud on a separate topic 
 ![clusters](https://user-images.githubusercontent.com/9555001/27804180-604d6e04-5fe2-11e7-9f33-d8d8da9a8bc0.png)
 
+You will find `pcl_helper.py` file under `/sensor_stick/scripts`. This file contains various functions to help you build up your perception pipeline. 
 
 Refer to the main Readme file for documentation on python-pcl and pcl_helper modules
