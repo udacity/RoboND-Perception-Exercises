@@ -167,8 +167,7 @@ def rgb_to_float(color):
     
         From the PCL docs:
         "Due to historical reasons (PCL was first developed as a ROS package),
-         the RGB information is packed into an integer and casted to a float.
-         Converts a PCL XYZ point cloud to a PCL XYZRGB point cloud"
+         the RGB information is packed into an integer and casted to a float"
     
         Args:
             color (list): 3-element list of integers [0-255,0-255,0-255]
