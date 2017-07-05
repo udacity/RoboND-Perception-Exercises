@@ -2,7 +2,7 @@
 
 In this exercise you will start building up your perception pipeline in ROS.  Here, you are provided a gazebo world, which contains the same table and random objects from Exercise-1.
 
-A simple stick robot with an RGB-D camera attached to its head via a pan-tilt joint is placed in front of the table.  For the detailed steps of how to carry out this exercise, please see the [Clustering for Segmentation]() lesson in the RoboND classroom.
+A simple stick robot with an RGB-D camera attached to its head via a pan-tilt joint is placed in front of the table.  For the detailed steps of how to carry out this exercise, please see the [Clustering for Segmentation](https://classroom.udacity.com/nanodegrees/nd209/parts/586e8e81-fc68-4f71-9cab-98ccd4766cfe/modules/e5bfcfbd-3f7d-43fe-8248-0c65d910345a/lessons/2cc29bbd-5c51-4c3e-b238-1282e4f24f42/concepts/02428d63-6f79-40dc-8105-31eda8e0def4) lesson in the RoboND classroom.
 
 Here's a brief summary of how to get setup for the exercise:
 
