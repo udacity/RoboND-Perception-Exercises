@@ -6,7 +6,7 @@ In this exercise you'll get a chance to apply some filtering techniques and use 
 
 ### The VM provided by Udacity comes with Python 2 installed as the default so if you are running the VM, or have Python 2 installed locally, you should have no problem.
 
-To follow along with a detailed walkthrough of this project please see the [Calibration, Filtering and Segmentation]() lesson from RoboND.
+To follow along with a detailed walkthrough of this project please see the [Calibration, Filtering and Segmentation](https://classroom.udacity.com/nanodegrees/nd209/parts/586e8e81-fc68-4f71-9cab-98ccd4766cfe/modules/e5bfcfbd-3f7d-43fe-8248-0c65d910345a/lessons/8d51e0bf-0fa1-49a7-bd45-e062c4a2121f/concepts/02cbb56e-9e54-4c08-977b-df149cb0bca4) lesson from RoboND.
 
 In brief, the steps to complete this exercise are the following:
 
