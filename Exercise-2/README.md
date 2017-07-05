@@ -15,8 +15,14 @@ $ cd ~/catkin_ws
 $ rosdep install --from-paths src --ignore-src --rosdistro=kinetic -y
 $ catkin_make
 ```
+3. Add following to your .bashrc file
+```
+export GAZEBO_MODEL_PATH=~/catkin_ws/src/sensor_stick/models
 
-3. Test the simulation setup by launching the gazebo environment. The command stated below will open a gazebo world along with an rviz window. Play around with it and get familiar with different topics being published to.
+source ~/catkin_ws/devel/setup.bash
+```
+
+4. Test the simulation setup by launching the gazebo environment. The command stated below will open a gazebo world along with an rviz window. Play around with it and get familiar with different topics being published to.
 
 ```sh
 $ roslaunch sensor_stick robot_spawn.launch
