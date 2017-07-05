@@ -1,5 +1,5 @@
 # Tabletop Segmentation
-![tabletop](https://user-images.githubusercontent.com/20687560/27845160-34792f8e-60e1-11e7-9260-4bf22c317b27.png)
+![screen shot 2017-07-05 at 10 49 11 am](https://user-images.githubusercontent.com/20687560/27878614-aff58b20-6173-11e7-909d-41d5d21a23d6.png)
 In this exercise you'll get a chance to apply some filtering techniques and use RANSAC plane fitting to segment the table in your point cloud.  
 
 ### Note: This exercise requires Python 2 due to the Python bindings to PCL being used here.  If you installed Python via Anaconda using the RoboND-Python-Starterkit, you have Python 3 installed in your RoboND conda environment so this exercise won't work.  
