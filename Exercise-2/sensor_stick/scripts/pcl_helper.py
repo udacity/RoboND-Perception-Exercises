@@ -190,16 +190,16 @@ def float_to_rgb(float_rgb):
             color (list): 3-element list of integers [0-255,0-255,0-255]
     """
     s = struct.pack('>f', float_rgb)
-	i = struct.unpack('>l', s)[0]
-	pack = ctypes.c_uint32(i).value
+    i = struct.unpack('>l', s)[0]
+    pack = ctypes.c_uint32(i).value
 			
-	r = (pack & 0x00FF0000) >> 16
-	g = (pack & 0x0000FF00) >> 8
-	b = (pack & 0x000000FF)
+    r = (pack & 0x00FF0000) >> 16
+    g = (pack & 0x0000FF00) >> 8
+    b = (pack & 0x000000FF)
 			
-	color = [r,g,b]
+    color = [r,g,b]
 			
-	return color
+    return color
 
             
 def get_color_list(cluster_count):
