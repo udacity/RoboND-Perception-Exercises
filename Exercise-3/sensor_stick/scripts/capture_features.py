@@ -10,7 +10,6 @@ from sensor_stick.training_helper import initial_setup
 from sensor_stick.training_helper import capture_sample
 from sensor_stick.features import compute_color_histograms
 from sensor_stick.features import compute_normal_histograms
-from sensor_stick.features import plot_histograms
 from sensor_stick.srv import GetNormals
 from geometry_msgs.msg import Pose
 from sensor_msgs.msg import PointCloud2
