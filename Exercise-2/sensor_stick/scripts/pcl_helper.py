@@ -57,7 +57,7 @@ def ros_to_pcl(ros_cloud):
 
 
 def pcl_to_ros(pcl_array):
-    """ Converts a ROS PointCloud2 message to a pcl PointXYZRGB
+    """ Converts a pcl PointXYZRGB to a ROS PointCloud2 message
     
         Args:
             pcl_array (PointCloud_PointXYZRGB): A PCL XYZRGB point cloud
