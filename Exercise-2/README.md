@@ -27,8 +27,7 @@ source ~/catkin_ws/devel/setup.bash
 ```sh
 $ roslaunch sensor_stick robot_spawn.launch
 ```
-![sensor_stick](https://user-images.githubusercontent.com/9555001/27804170-51f5da76-5fe2-11e7-845c-130fcfd8cf3e.png)
-
+![screen shot 2017-07-05 at 12 56 36 pm](https://user-images.githubusercontent.com/20687560/27895526-30da599c-61c8-11e7-80ab-4b4224cfbb10.png)
 Now, to build your perception pipeline, you must perform following steps:
 
 2. Create a python ros node that subscribes to `/sensor_stick/point_cloud` topic. Use the `template.py` file found under /sensor_stick/scripts/ to get started.
