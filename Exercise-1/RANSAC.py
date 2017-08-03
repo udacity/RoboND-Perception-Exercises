@@ -4,6 +4,7 @@ import pcl
 # Load Point Cloud file
 cloud = pcl.load_XYZRGB('tabletop.pcd')
 
+
 # Voxel Grid filter
 
 
