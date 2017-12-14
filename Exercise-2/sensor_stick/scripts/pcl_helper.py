@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 
-# Copyright (C) 2017 Electric Movement Inc.
+# Copyright (C) 2017 Udacity Inc.
 #
 # This file is part of Robotic Arm: Pick and Place project for Udacity
 # Robotics nano-degree program
@@ -24,10 +24,10 @@ from random import randint
 
 def random_color_gen():
     """ Generates a random color
-    
+
         Args: None
-        
-        Returns: 
+
+        Returns:
             list: 3 elements, R, G, and B
     """
     r = randint(0, 255)
@@ -38,10 +38,10 @@ def random_color_gen():
 
 def ros_to_pcl(ros_cloud):
     """ Converts a ROS PointCloud2 message to a pcl PointXYZRGB
-    
+
         Args:
             ros_cloud (PointCloud2): ROS PointCloud2 message
-            
+
         Returns:
             pcl.PointCloud_PointXYZRGB: PCL XYZRGB point cloud
     """
@@ -58,10 +58,10 @@ def ros_to_pcl(ros_cloud):
 
 def pcl_to_ros(pcl_array):
     """ Converts a pcl PointXYZRGB to a ROS PointCloud2 message
-    
+
         Args:
             pcl_array (PointCloud_PointXYZRGB): A PCL XYZRGB point cloud
-            
+
         Returns:
             PointCloud2: A ROS point cloud
     """
@@ -114,10 +114,10 @@ def pcl_to_ros(pcl_array):
 
 def XYZRGB_to_XYZ(XYZRGB_cloud):
     """ Converts a PCL XYZRGB point cloud to an XYZ point cloud (removes color info)
-    
+
         Args:
             XYZRGB_cloud (PointCloud_PointXYZRGB): A PCL XYZRGB point cloud
-            
+
         Returns:
             PointCloud_PointXYZ: A PCL XYZ point cloud
     """
@@ -133,14 +133,14 @@ def XYZRGB_to_XYZ(XYZRGB_cloud):
 
 def XYZ_to_XYZRGB(XYZ_cloud, color):
     """ Converts a PCL XYZ point cloud to a PCL XYZRGB point cloud
-    
+
         All returned points in the XYZRGB cloud will be the color indicated
         by the color parameter.
-    
+
         Args:
             XYZ_cloud (PointCloud_XYZ): A PCL XYZ point cloud
             color (list): 3-element list of integers [0-255,0-255,0-255]
-            
+
         Returns:
             PointCloud_PointXYZRGB: A PCL XYZRGB point cloud
     """
@@ -158,14 +158,14 @@ def XYZ_to_XYZRGB(XYZ_cloud, color):
 
 def rgb_to_float(color):
     """ Converts an RGB list to the packed float format used by PCL
-    
+
         From the PCL docs:
         "Due to historical reasons (PCL was first developed as a ROS package),
          the RGB information is packed into an integer and casted to a float"
-    
+
         Args:
             color (list): 3-element list of integers [0-255,0-255,0-255]
-            
+
         Returns:
             float_rgb: RGB value packed as a float
     """
@@ -181,33 +181,33 @@ def rgb_to_float(color):
 
 
 def float_to_rgb(float_rgb):
-    """ Converts a packed float RGB format to an RGB list    
-        
+    """ Converts a packed float RGB format to an RGB list
+
         Args:
             float_rgb: RGB value packed as a float
-            
+
         Returns:
             color (list): 3-element list of integers [0-255,0-255,0-255]
     """
     s = struct.pack('>f', float_rgb)
     i = struct.unpack('>l', s)[0]
     pack = ctypes.c_uint32(i).value
-			
+
     r = (pack & 0x00FF0000) >> 16
     g = (pack & 0x0000FF00) >> 8
     b = (pack & 0x000000FF)
-			
+
     color = [r,g,b]
-			
+
     return color
 
-            
+
 def get_color_list(cluster_count):
     """ Returns a list of randomized colors
-    
+
         Args:
             cluster_count (int): Number of random colors to generate
-            
+
         Returns:
             (list): List containing 3-element color lists
     """

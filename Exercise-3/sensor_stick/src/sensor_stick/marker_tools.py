@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 
-# Copyright (C) 2017 Electric Movement Inc.
+# Copyright (C) 2017 Udacity Inc.
 #
 # This file is part of Robotic Arm: Pick and Place project for Udacity
 # Robotics nano-degree program
@@ -15,15 +15,15 @@ from visualization_msgs.msg import Marker
 
 def make_label(text, position, id = 0 ,duration = 5.0, color=[1.0,1.0,1.0]):
     """ Helper function for generating visualization markers.
-    
+
         Args:
             text (str): Text string to be displayed.
             position (list): List containing [x,y,z] positions
             id (int): Integer identifying the label
             duration (rospy.Duration): How long the label will be displayed for
             color (list): List of label color floats from 0 to 1 [r,g,b]
-        
-        Returns: 
+
+        Returns:
             Marker: A text view marker which can be published to RViz
     """
     marker = Marker()

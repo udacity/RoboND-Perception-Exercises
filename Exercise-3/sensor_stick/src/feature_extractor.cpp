@@ -1,5 +1,5 @@
 /*******************************************************************************
- * Copyright (C) 2017 Electric Movement Inc.
+ * Copyright (C) 2017 Udacity Inc.
  *
  * This file is part of Robotic Arm: Pick and Place project for Udacity
  * Robotics nano-degree program
@@ -88,7 +88,7 @@ private:
     ne.setInputCloud (sp_pcl_cloud);
     pcl::search::KdTree<pcl::PointXYZ>::Ptr tree(new pcl::search::KdTree<pcl::PointXYZ> ());
     ne.setSearchMethod (tree);
-    
+
     // Use all neighbors in a sphere of radius 3cm
     ne.setRadiusSearch(0.03);
 
@@ -116,7 +116,7 @@ private:
 //   ne.setInputCloud (sp_pcl_cloud);
 //   pcl::search::KdTree<pcl::PointXYZ>::Ptr tree(new pcl::search::KdTree<pcl::PointXYZ> ());
 //   ne.setSearchMethod (tree);
-  
+
 //   // Use all neighbors in a sphere of radius 3cm
 //   ne.setRadiusSearch(0.03);
 
