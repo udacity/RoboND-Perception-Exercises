@@ -1,5 +1,5 @@
 /*******************************************************************************
- * Copyright (C) 2017 Electric Movement Inc.
+ * Copyright (C) 2017 Udacity Inc.
  *
  * This file is part of Robotic Arm: Pick and Place project for Udacity
  * Robotics nano-degree program

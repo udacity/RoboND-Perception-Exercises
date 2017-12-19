@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 
-# Copyright (C) 2017 Electric Movement Inc.
+# Copyright (C) 2017 Udacity Inc.
 #
 # This file is part of perception exercises for the Udacity
 # Robotics nano-degree program
@@ -29,10 +29,10 @@ from sensor_msgs.msg import PointCloud2
 
 def capture_sample():
     """ Captures a PointCloud2 using the sensor stick RGBD camera
-    
+
         Args: None
-        
-        Returns: 
+
+        Returns:
             PointCloud2: a single point cloud from the RGBD camrea
     """
     get_model_state_prox = rospy.ServiceProxy('gazebo/get_model_state',GetModelState)
@@ -66,9 +66,9 @@ def initial_setup():
         the ground plane, so that the only depth points produce will
         correspond to the object of interest (eliminating the need for
         clustering and segmentation as part of the trianing process)
-    
+
         Args: None
-        
+
         Returns: None
     """
     rospy.wait_for_service('gazebo/get_model_state')
@@ -95,9 +95,9 @@ def initial_setup():
 
 def spawn_model(model_name):
     """ Spawns a model in front of the RGBD camera.
-    
+
         Args: None
-        
+
         Returns: None
     """
     initial_pose = Pose()
@@ -120,4 +120,3 @@ def delete_model():
     # Delete the old model if it's stil around
     delete_model_prox = rospy.ServiceProxy('gazebo/delete_model', DeleteModel)
     delete_model_prox('training_model')
-
