@@ -5,7 +5,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 from sklearn import svm
 from sklearn.preprocessing import LabelEncoder, StandardScaler
-from sklearn import cross_validation
+from sklearn.model_selection import cross_val_score, cross_val_predict, KFold
 from sklearn import metrics
 
 def plot_confusion_matrix(cm, classes,
@@ -65,27 +65,26 @@ y_train = encoder.fit_transform(y_train)
 clf = svm.SVC(kernel='linear')
 
 # Set up 5-fold cross-validation
-kf = cross_validation.KFold(len(X_train),
-                            n_folds=5,
-                            shuffle=True,
-                            random_state=1)
+kf = KFold(n_splits=5,
+            shuffle=True,
+            random_state=1)
 
 # Perform cross-validation
-scores = cross_validation.cross_val_score(cv=kf,
-                                         estimator=clf,
-                                         X=X_train, 
-                                         y=y_train,
-                                         scoring='accuracy'
-                                        )
+scores = cross_val_score(estimator=clf,
+                         X=X_train, 
+                         y=y_train,
+                         scoring='accuracy',
+                         cv=kf
+                        )
 print('Scores: ' + str(scores))
 print('Accuracy: %0.2f (+/- %0.2f)' % (scores.mean(), 2*scores.std()))
 
 # Gather predictions
-predictions = cross_validation.cross_val_predict(cv=kf,
-                                          estimator=clf,
-                                          X=X_train, 
-                                          y=y_train
-                                         )
+predictions = cross_val_predict(estimator=clf,
+                                X=X_train, 
+                                y=y_train,
+                                cv=kf
+                               )
 
 accuracy_score = metrics.accuracy_score(y_train, predictions)
 print('accuracy score: '+str(accuracy_score))
